@@ -19,12 +19,15 @@ const Grid = styled.div<ImageProps>`
 
 function App() {
   const mask="https://static.vecteezy.com/system/resources/thumbnails/001/189/352/small/tree.png";
+  const [objectString, setObjectString] = useState<number[]>([0,0,0,0,0]);
   const [animalString, setAnimalString] = useState<number[]>([0,0,0,0,0]);
 
   const randomizeImages = () => {
-    const newRandomNumbers: number[] = [Math.floor(Math.random() * 10),...Array.from({ length: 4 }, () => Math.floor(Math.random() * 16))];
-    setAnimalString(newRandomNumbers);
-    console.log("Animal: " + newRandomNumbers);
+    const newObjectString: number[] = [Math.floor(Math.random() * 11),...Array.from({ length: 4 }, () => Math.floor(Math.random() * 13))];
+    setObjectString(newObjectString);
+    const newAnimalString: number[] = [Math.floor(Math.random() * 10),...Array.from({ length: 4 }, () => Math.floor(Math.random() * 16))];
+    setAnimalString(newAnimalString);
+    console.log("Object: " + newObjectString + "\nAnimal: " + newAnimalString);
   };
 
   useEffect(() => {
@@ -45,11 +48,11 @@ function App() {
                 <img className='image' src={require("./images/Nature/2.png")}/>
                 <img className='image' src={require("./images/Nature/3.png")}/>
           </Grid>
-          <Grid maskSrc={require("./masks/Animal/2.png")}>
-                <img className='image' src={require("./images/Nature/0.png")}/>
-                <img className='image' src={require("./images/Nature/1.png")}/>
-                <img className='image' src={require("./images/Nature/2.png")}/>
-                <img className='image' src={require("./images/Nature/3.png")}/>
+          <Grid maskSrc={require(`./masks/Object/${objectString[0]}.png`)}>
+                <img className='image' src={require(`./images/Object/${objectString[1]}.png`)}/>
+                <img className='image' src={require(`./images/Object/${objectString[2]}.png`)}/>
+                <img className='image' src={require(`./images/Object/${objectString[3]}.png`)}/>
+                <img className='image' src={require(`./images/Object/${objectString[4]}.png`)}/>
           </Grid>
           <Grid maskSrc={require(`./masks/Animal/${animalString[0]}.png`)}>
                 <img className='image' src={require(`./images/Animal/${animalString[1]}.png`)}/>

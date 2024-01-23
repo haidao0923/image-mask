@@ -19,8 +19,8 @@
 }
 
 .image {
-  height: min(20vw, 30vh);
-  width: min(20vw, 30vh);
+  height: min(15vw, 30vh);
+  width: min(15vw, 30vh);
 }
 
 .title {

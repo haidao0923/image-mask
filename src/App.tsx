@@ -38,6 +38,12 @@ function App() {
                 <img className='image' src={require("./images/Nature/2.png")}/>
                 <img className='image' src={require("./images/Nature/3.png")}/>
           </Grid>
+          <Grid maskSrc={mask}>
+                <img className='image' src={require("./images/Nature/0.png")}/>
+                <img className='image' src={require("./images/Nature/1.png")}/>
+                <img className='image' src={require("./images/Nature/2.png")}/>
+                <img className='image' src={require("./images/Nature/3.png")}/>
+          </Grid>
         </div>
       </header>
     </div>

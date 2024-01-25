@@ -32,3 +32,18 @@
   padding: 0;
   color: #05e0ebad;
 }
+
+.choice-group {
+  display: flex;
+  border-top: 1px solid #05e0ebad;
+  border-bottom: 1px solid #05e0ebad;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.choice-text {
+  font-size: min(3vw, 3vh);
+  padding: 0;
+  color: #05e0ebad;
+}

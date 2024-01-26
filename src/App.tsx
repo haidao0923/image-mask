@@ -42,7 +42,7 @@ function App() {
     setObjectString(newObjectString);
     const newAnimalString: number[] = [Math.floor(Math.random() * 10),...Array.from({ length: 4 }, () => Math.floor(Math.random() * 16))];
     setAnimalString(newAnimalString);
-    console.log("Nature: " + newNatureString + "\nObject: " + newObjectString + "\nAnimal: " + newAnimalString);
+    console.log("Nature: " + newNatureString + "\nTransportation: " + newObjectString + "\nAnimal: " + newAnimalString);
   };
 
   useEffect(() => {
